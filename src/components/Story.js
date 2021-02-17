@@ -19,11 +19,11 @@ export const Story = ({ storyId}) => {
                 </StoryTitle>
 
                 <StoryMeta>
-                    <span className="story__by" data-testid="story-by">
+                    <span data-testid="story-by">
                         <StoryMetaElement color="#000">By:</StoryMetaElement> {story.by}
                     </span>
-                    <span className="story__time" data-testid="story-time">
-                        <StoryMetaElement color="#000">Posted:</StoryMetaElement> {`  `}
+                    <span data-testid="story-time">
+                        <StoryMetaElement color="#000">Posted:</StoryMetaElement>
                         {story.time}
                     </span>
                 </StoryMeta>
