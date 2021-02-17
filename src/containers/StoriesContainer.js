@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'; 
 import { getStoryIds } from '../services/hnApi'; 
+import { Story } from '../components/Story'; 
 
 export const StoriesContainer = () => {
     
@@ -7,14 +8,10 @@ export const StoriesContainer = () => {
 
     useEffect(() => {
         getStoryIds().then(data => setStoryIds(data)); 
-        console.log("use effect here!")
     }, []); 
     
-    return (
-        <p>
-            {JSON.stringify(storyIds)}
-        </p>
-    )
+    return storyIds.map(storyId => (<Story key={storyId} storyId ={storyId} /> )
+    ); 
 }
 
 export default StoriesContainer; 
